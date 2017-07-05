@@ -11,7 +11,7 @@ import edu.bionic.service.impl.ProductServiceImpl;
  */
 public class ConsoleApplication {
     public static void main(String[] args) {
-       ProductDaoMock productDaoMock =  new ProductDaoMock();
+        ProductDaoMock productDaoMock =  new ProductDaoMock();
         productDaoMock.initProductStorage();
         ProductServiceImpl productService = new ProductServiceImpl(productDaoMock);
         ProductConsoleController productConsoleController = new ProductConsoleController(productService);

@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
  * Created by c268 on 10.07.2017.
  */
 public class Review {
-    private LocalDateTime date;
+    private String date;
     private String name;
     private String text;
     private Integer rating;
@@ -18,11 +18,11 @@ public class Review {
         this.rating = rating;
     }
 
-    public LocalDateTime getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(LocalDateTime date) {
+    public void setDate(String date) {
         this.date = date;
     }
 

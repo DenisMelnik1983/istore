@@ -1,7 +1,9 @@
 package edu.bionic;
 
+import com.sun.org.apache.xpath.internal.SourceTree;
 import edu.bionic.presentation.console.OrderConsoleController;
 import edu.bionic.presentation.console.ProductConsoleController;
+import edu.bionic.presentation.console.ReviewConsoleController;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -15,6 +17,7 @@ public class ConsoleApplication {
 
     private static ProductConsoleController productController;
     private static OrderConsoleController orderConsoleController;
+    private static ReviewConsoleController reviewConsoleController;
 
     public static void main(String[] args) throws IOException {
         ApplicationContext context =
@@ -22,6 +25,7 @@ public class ConsoleApplication {
 
         productController = context.getBean("productConsoleController", ProductConsoleController.class);
         orderConsoleController = context.getBean("orderConsoleController", OrderConsoleController.class);
+        reviewConsoleController = context.getBean("reviewConsoleController", ReviewConsoleController.class);
 
         startPage();
     }
@@ -32,7 +36,7 @@ public class ConsoleApplication {
         System.out.println("Выберите действие:");
         System.out.println("1. Купить товары");
         System.out.println("2. Просмотреть заказы");
-        System.out.println("3. Оставить отзыв");
+        System.out.println("3. Все отзывы");
         System.out.println("0. Выйти из приложения");
         switch (consoleReader.readLine()) {
             case "1":
@@ -45,7 +49,7 @@ public class ConsoleApplication {
                 break;
             case "3":
                 System.out.println("---------------------------------------");
-                newReview();
+                allReview();
                 break;
             case "0":
                 System.exit(0);
@@ -54,7 +58,9 @@ public class ConsoleApplication {
         }
 
     }
-    private static void newReview() throws IOException {
+    private static void allReview() throws IOException {
+        reviewConsoleController.printAllReview();
+        startPage();
 
     }
 

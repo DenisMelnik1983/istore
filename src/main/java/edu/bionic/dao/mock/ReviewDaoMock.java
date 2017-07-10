@@ -17,8 +17,8 @@ public class ReviewDaoMock implements ReviewDao {
 
     public void initReviewStorage() {
         reviewStorage = new ArrayList<>();
-        reviewStorage.add(new Review("22", "Ivan", "good bla bla bla", 11));
-        reviewStorage.add(new Review("23", "Ivan", "good bla bla bla", 11));
+        reviewStorage.add(new Review("11", "Ivan", "good bla bla bla", 11));
+        reviewStorage.add(new Review("22","Ivan", "good bla bla bla", 11));
         reviewStorage.add(new Review("12", "Ivan", "good bla bla bla", 101));
         reviewStorage.add(new Review("2", "Ivan", "good bla bla bla", 21));
         reviewStorage.add(new Review("22", "Ivan", "good bla bla bla", 1));

@@ -1,5 +1,6 @@
 package edu.bionic.service;
 
+import edu.bionic.domain.Product;
 import edu.bionic.domain.Review;
 
 import java.util.List;
@@ -9,4 +10,7 @@ import java.util.List;
  */
 public interface ReviewService {
     List<Review> getAll();
+
+
+    Product getById(int productId);
 }

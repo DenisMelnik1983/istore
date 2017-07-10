@@ -32,6 +32,7 @@ public class ConsoleApplication {
         System.out.println("Выберите действие:");
         System.out.println("1. Купить товары");
         System.out.println("2. Просмотреть заказы");
+        System.out.println("3. Оставить отзыв");
         System.out.println("0. Выйти из приложения");
         switch (consoleReader.readLine()) {
             case "1":
@@ -42,11 +43,18 @@ public class ConsoleApplication {
                 System.out.println("---------------------------------------");
                 printOrders();
                 break;
+            case "3":
+                System.out.println("---------------------------------------");
+                newReview();
+                break;
             case "0":
                 System.exit(0);
             default:
                 startPage();
         }
+
+    }
+    private static void newReview() throws IOException {
 
     }
 

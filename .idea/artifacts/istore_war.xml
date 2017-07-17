@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="istore:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="iStore.war">
+      <element id="artifact" artifact-name="istore:war exploded" />
+    </root>
+  </artifact>
+</component>
